@@ -1,0 +1,84 @@
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "meRiz",
+    "email": "meRiz@gmail.com",
+    "password": "hahaIamAdmin",
+    "confPassword": "hahaIamAdmin",
+    "role": "admin"
+}
+
+
+### get All Users
+GET http://localhost:5000/users
+
+### get single user
+GET http://localhost:5000/users/6e30d416-452a-4c67-af09-3ba5171ccaf2
+
+### update user
+PATCH http://localhost:5000/users/6e30d416-452a-4c67-af09-3ba5171ccaf2
+Content-Type: application/json
+
+{
+    "name": "kyuuriz",
+    "email": "kyuuriz@gmail.com",
+    "password": "qwerty123",
+    "confPassword": "qwerty123",
+    "role": "user"
+}
+
+### delete user
+DELETE  http://localhost:5000/users/6e30d416-452a-4c67-af09-3ba5171ccaf2
+
+
+### Login Admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "meRiz@gmail.com",
+    "password": "hahaIamAdmin"
+}
+
+### Login User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "kyuuriz@gmail.com",
+    "password": "qwerty123"
+}
+###
+GET http://localhost:5000/me
+
+### Logout
+DELETE http://localhost:5000/logout
+
+
+### get All Products
+GET http://localhost:5000/products
+
+### get single Products
+GET http://localhost:5000/products/f16b9859-a961-4356-ac2d-a7d31552b830
+
+### Create Products
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "BDO 6",
+    "price": "6"
+}
+
+### Update Products
+PATCH http://localhost:5000/products/f16b9859-a961-4356-ac2d-a7d31552b830
+Content-Type: application/json
+
+{
+    "name": "BDO Updated",
+    "price": "12"
+}
+
+### Delete Products
+DELETE http://localhost:5000/products/6a7ee6c9-3d85-45a1-b1f8-2f91f808fc5a
